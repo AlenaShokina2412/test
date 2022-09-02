@@ -16,7 +16,7 @@ namespace TestGame
         public Object TankComputer;
         public Object TankPlayer;
 
-        /*Конструктор*/
+        /*Конструкторы*/
         public Object(int Armor, double Life, int Damage, int CountBullet, int Armor1, double Life1, int Damage1, int CountBullet1) {
             TankPlayer = new Object(Armor, Life, Damage, CountBullet);
             TankComputer = new Object(Armor1, Life1, Damage1, CountBullet1);
@@ -85,8 +85,8 @@ namespace TestGame
                             Console.WriteLine("Не хватает патронов, необходимо их купить! \n");
                             continue;
                         }
-                        if (CountShot % 3 == 0){                                                             // каждый 3 удар с промохом
-                            this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, -10);     // удар с вероятностью промоха
+                        if (CountShot % 3 == 0){                                                             // каждый 3 удар с промахом
+                            this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, -10);     // удар с вероятностью промаха
                         }
                         else this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, 20);     // удар с вероятностью критического удара
                         Console.WriteLine("Вы нанесли урон.");
@@ -99,7 +99,7 @@ namespace TestGame
                         this.TankPlayer.BuyBullet(BuyCount);
                         break;
                     default:    
-                    /* При неверном ввидении выводится предупреждение*/
+                    /* При неверном введении выводится предупреждение*/
                         Console.WriteLine("Неверное указанно действие(при выборе необходимо нажать цифру 1,2 или 3)");
                         continue;
                 }
