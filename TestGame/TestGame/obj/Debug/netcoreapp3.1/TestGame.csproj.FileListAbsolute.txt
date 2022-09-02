@@ -1,0 +1,13 @@
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.exe
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.deps.json
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.runtimeconfig.json
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.runtimeconfig.dev.json
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.dll
+C:\Users\79652\Desktop\test\TestGame\TestGame\bin\Debug\netcoreapp3.1\TestGame.pdb
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.csprojAssemblyReference.cache
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.AssemblyInfoInputs.cache
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.AssemblyInfo.cs
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.csproj.CoreCompileInputs.cache
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.dll
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.pdb
+C:\Users\79652\Desktop\test\TestGame\TestGame\obj\Debug\netcoreapp3.1\TestGame.genruntimeconfig.cache
