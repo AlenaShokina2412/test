@@ -72,21 +72,23 @@ namespace TestGame
             int CountShot = 1;
             /*Первый шаг делает игрок, после делает шаг компьютер */
             while ((this.TankPlayer.Health > 0 && this.TankComputer.Health > 0)) {
+            
                 Console.WriteLine($"Жизни моего танка: {this.TankPlayer.Health}, кол-во пуль: {this.TankPlayer.CountBullet}");
                 Console.WriteLine($"Жизни танка противник: {this.TankComputer.Health}, кол-во пуль: {this.TankComputer.CountBullet}");
                 Console.WriteLine("Выберите требуемое действие(при выборе нажмите цифру 1,2 или 3):\n 1.Огонь\n 2.Ремонт \n 3.Купить патроны\n");
+                
                 string StepPlayer = Console.ReadLine();   // получаем число от 1 до 3
                 switch (StepPlayer)
                 {
                     case "1":     // Выстрел
-                        if (this.TankPlayer.CountBullet == 0){   // При нехватки патронов, игрок не может стрелять 
+                        if (this.TankPlayer.CountBullet == 0){                                              // При нехватки патронов, игрок не может стрелять 
                             Console.WriteLine("Не хватает патронов, необходимо их купить! \n");
                             continue;
                         }
-                        if (CountShot % 3 == 0){   // каждый 3 удар с промохом
-                            this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, -10);  // удар с вероятностью промоха
+                        if (CountShot % 3 == 0){                                                             // каждый 3 удар с промохом
+                            this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, -10);     // удар с вероятностью промоха
                         }
-                        else this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, 20);// удар с вероятностью критического удара
+                        else this.TankComputer.Health -= this.TankPlayer.Shot( TankComputer.Armor, 20);     // удар с вероятностью критического удара
                         Console.WriteLine("Вы нанесли урон.");
                         break;
                     case "2":     //Починка 
@@ -96,7 +98,8 @@ namespace TestGame
                     case "3":     //Покупка пуль
                         this.TankPlayer.BuyBullet(BuyCount);
                         break;
-                    default:    // При неверном ввидении выводится предупреждение
+                    default:    
+                    /* При неверном ввидении выводится предупреждение*/
                         Console.WriteLine("Неверное указанно действие(при выборе необходимо нажать цифру 1,2 или 3)");
                         continue;
                 }
