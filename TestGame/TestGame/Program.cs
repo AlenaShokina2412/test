@@ -16,7 +16,7 @@ namespace TestGame
 
         static void Main(string[] args)
         {
-            /*Создание объекта и запуск игры*/
+            /*Создание объекта и запуск игры(каждому дается по 5 пуль)*/
             Object Gme = new Object(ArmorTankPlayer,LifeTankPlayer,DamageTankPlayer, 5 , ArmorTankComputer, LifeTankComputer,  DamageTankComputer,5);
             Gme.AlgorithmGame();
         }
