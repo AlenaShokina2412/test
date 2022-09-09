@@ -6,6 +6,6 @@ namespace TestGame
 {
     interface IComputer// интерфейс компьютера
     {
-        double ComputerStep( double Health, int Armor);
+        void ComputerStep( double Health, int Armor);
     }
 }
