@@ -13,27 +13,26 @@ namespace TestGame
         public int CountBullet { get; set; }    //«Кол-во патронов» 
         public int BuyCount = 3;                //«Возможное кол-во патронов»
 
-        public Object TankComputer;
-        public Object TankPlayer;
+        public Tank TankComputer;
+        public Tank TankPlayer;
 
         /*Конструкторы*/
         public Object(int Armor, double Life, int Damage, int CountBullet, int Armor1, double Life1, int Damage1, int CountBullet1) {
-            TankPlayer = new Object(Armor, Life, Damage, CountBullet);
-            TankComputer = new Object(Armor1, Life1, Damage1, CountBullet1);
+            TankPlayer = new Tank(Armor, Life, Damage, CountBullet);
+            TankComputer = new Tank(Armor1, Life1, Damage1, CountBullet1);
         }
-        public Object(int Armor, double Life, int Damage, int CountBullet)
-        {
-            this.Armor = Armor;
-            this.Life = this.Health =Life;
-            this.Damage = Damage;
-            this.CountBullet = CountBullet;
-        }
-        /*Урон*/
+        /*Урон
         public double Shot( int EnemyArmor, int Probability) { 
             //нанесение урона с учетом брони и вероятностью критического урона или промаха
             double EnemyHealth = (this.Damage - EnemyArmor) + ((this.Damage - EnemyArmor) * (Probability / 100));
             this.CountBullet--;
             return EnemyHealth;
+        }*/
+        public void Shot(Tank B, int Probability)
+        {
+            //нанесение урона с учетом брони и вероятностью критического урона или
+            B.Health = (this.Damage - B.Armor) + ((this.Damage - B.Armor) * (Probability / 100));
+            this.CountBullet--;
         }
         /*Починка*/
         public void Repair(){
@@ -45,7 +44,8 @@ namespace TestGame
         public void BuyBullet(int N){
             this.CountBullet += N;
         }
-        /*Ход компьютера*/
+        public void ComputerStep(double Health, int Armor) { }
+        /*Ход компьютера*//*
         public double ComputerStep( double TankPlayerHealth, int TankPlayerArmor) {
             Random rnd = new Random();      // для случайного выбора действия
             int StepComputer;
@@ -67,10 +67,10 @@ namespace TestGame
             else { this.Repair(); }         //иначе совершается восстановление
             return HealthEnemy;
         }
-        
-        public void AlgorithmGame(){
+        */
+        /*public void AlgorithmGame(){
             int CountShot = 1;
-            /*Первый шаг делает игрок, после делает шаг компьютер */
+            //Первый шаг делает игрок, после делает шаг компьютер 
             while ((this.TankPlayer.Health > 0 && this.TankComputer.Health > 0)) {
             
                 Console.WriteLine($"Жизни моего танка: {this.TankPlayer.Health}, кол-во пуль: {this.TankPlayer.CountBullet}");
@@ -99,7 +99,7 @@ namespace TestGame
                         this.TankPlayer.BuyBullet(BuyCount);
                         break;
                     default:    
-                    /* При неверном введении выводится предупреждение*/
+                    // При неверном введении выводится предупреждение
                         Console.WriteLine("Неверное указанно действие(при выборе необходимо нажать цифру 1,2 или 3)");
                         continue;
                 }
@@ -108,7 +108,7 @@ namespace TestGame
                 Console.ReadLine(); 
                 CountShot++;
             }
-            /*Вывод результатов игры*/
+            //Вывод результатов игры
             if (this.TankPlayer.Health < 0 && this.TankComputer.Health < 0){
                 Console.WriteLine("Ничья");
             }else{
@@ -119,6 +119,6 @@ namespace TestGame
                 }
             }
         }
-        ~Object() { }
+        ~Object() { }*/
     }
 }
