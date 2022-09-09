@@ -12,7 +12,7 @@ namespace TestGame
         public int Damage { get; set; }         //«Урон»
         public int CountBullet { get; set; }    //«Кол-во патронов»
         
-        public double Shot( int EnemyArmor, int Probability);   //урон
+        public void Shot(Tank B, int Probability);   //урон
         public void Repair();           //починка
         public void BuyBullet(int N);   // покупка пуль
     }
