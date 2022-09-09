@@ -19,13 +19,11 @@ namespace TestGame
             this.CountBullet = bullet;
         }
 
-        public double Shot(  int EnemyArmor, int Probability)
+        public void Shot(Tank B, int Probability)
         {
-            double EnemyHealth = 0.0;
             //нанесение урона с учетом брони и вероятностью критического урона или
-            EnemyHealth = (this.Damage - EnemyArmor)+((this.Damage - EnemyArmor)* (Probability / 100));
+            B.Health = (this.Damage - B.Armor) + ((this.Damage - B.Armor) * (Probability / 100));
             this.CountBullet--;
-            return EnemyHealth;
         }
         public void Repair()
         {/*увеличение жизни на 50% от урона*/
